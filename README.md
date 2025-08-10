@@ -32,9 +32,7 @@ Use this command to enable the datapack.
   `/function jumpandrun:checkpoints/remove_end`  
   Removes the endpoint of the course.
 
-> **Note:** Only **one** start point and **one** end point should exist in the game at a time. Avoid duplicates to prevent errors.
-
-> **Important Consideration for Removing Points:**  
+> **Important for Removing Points:**  
 > When removing checkpoints or points, it is essential to follow the correct order: **top to bottom** (i.e., from the most recent to the earliest).  
 > - The **last** checkpoint created must be removed first,  
 > - Followed by the **previous** checkpoint, and so on,  
