@@ -6,7 +6,7 @@ scoreboard objectives remove checkpointCount
 scoreboard objectives remove checkpointCooldown
 scoreboard objectives remove carrotStickUsed
 scoreboard objectives remove temp_checkpoint
-scoreboard objectives remove temp_health
+scoreboard objectives remove temp_AbsorptionAmount
 scoreboard objectives remove fails
 
 # Remove all checkpoint and end armor stands

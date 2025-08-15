@@ -1,6 +1,6 @@
 # Activate checkpoint - only if higher than current progress
 # Get checkpoint number from nearest armor stand
-execute store result score @s temp_checkpoint run data get entity @e[type=armor_stand,tag=checkpoint,limit=1,sort=nearest] Health
+execute store result score @s temp_checkpoint run data get entity @e[type=armor_stand,tag=checkpoint,limit=1,sort=nearest] AbsorptionAmount
 
 # Only activate if checkpoint number is higher than current
 execute if score @s temp_checkpoint > @s checkpointCount run spawnpoint @s ~ ~ ~
