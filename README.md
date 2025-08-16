@@ -57,4 +57,3 @@ Use this command to enable the datapack.
 - Be sure not to create duplicate start or end points, as this can lead to unexpected behavior.
 - You can always reset progress or completely uninstall the datapack if you want to reconfigure the jump-and-run course.
 
-Have fun creating and testing your jump-and-run maps!
