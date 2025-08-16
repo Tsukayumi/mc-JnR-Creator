@@ -54,6 +54,7 @@ Use this command to enable the datapack.
 
 ## Additional Notes
 
+- You can rightclick with a carrot_on_a_stick to tp you to your last checkpoint.
 - Be sure not to create duplicate start or end points, as this can lead to unexpected behavior.
 - You can always reset progress or completely uninstall the datapack if you want to reconfigure the jump-and-run course.
 
