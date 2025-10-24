@@ -1,4 +1,4 @@
-# Easy Jump and Run Datapack for Minecraft
+# Jump and Run Datapack for Minecraft
 
 This datapack makes it easier to create jump-and-run maps in Minecraft. It provides a simple way to set start points, checkpoints, and end points, as well as track the timer.
 
