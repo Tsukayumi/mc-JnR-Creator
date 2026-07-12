@@ -28,7 +28,8 @@ scoreboard objectives add JnR.Player dummy {"text":"Jump and Run","color":"red",
 scoreboard objectives setdisplay sidebar JnR.Player
 scoreboard players set @a JnR.Player 0
 
-tellraw @a {"text":"------------------------------------------------","color":"yellow"}
-tellraw @a {"text":"Jump and Run Datapack loaded!","color":"green"}
-tellraw @a {"text":"Use /function jumpandrun:checkpoints:create_checkpoint to create checkpoints (Checkpoints only work in Survival and Adventure Mode)","color":"green"}
-tellraw @a {"text":"------------------------------------------------","color":"yellow"}
+tellraw @a {"text":"------------------------------------------------","color":"white"}
+tellraw @a {"text":"Jump and Run Datapack loaded! \n","color":"green"}
+tellraw @a {"text":"text \n","color":"gray"}
+tellraw @a {"text":"[HELP]  [GET COMMAND BOOK]","color":"red"}
+tellraw @a {"text":"------------------------------------------------","color":"white"}

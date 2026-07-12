@@ -14,7 +14,7 @@ execute as @e[type=armor_stand,tag=checkpoint] if score @s JnR.temp_AbsorptionAm
 execute as @e[type=armor_stand,tag=checkpoint] if score @s JnR.temp_AbsorptionAmount = @a[tag=teleporting_player,limit=1] JnR.checkpointCount run data modify entity @a[tag=teleporting_player,limit=1] Rotation set from entity @s Rotation
 
 #fails add +1
-execute as @e[type=armor_stand,tag=checkpoint] if score @s JnR.temp_AbsorptionAmount = @a[tag=teleporting_player,limit=1] JnR.checkpointCount run scoreboard players add @a[tag=teleporting_player,limit=1] fails 1
+execute as @e[type=armor_stand,tag=checkpoint] if score @s JnR.temp_AbsorptionAmount = @a[tag=teleporting_player,limit=1] JnR.checkpointCount run scoreboard players add @a[tag=teleporting_player,limit=1] JnR.fails 1
 
 # Remove temporary tag
 tag @s remove teleporting_player
