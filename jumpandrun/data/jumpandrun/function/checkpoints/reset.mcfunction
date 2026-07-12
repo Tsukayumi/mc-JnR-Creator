@@ -1,1 +1,1 @@
-scoreboard players reset @a checkpointCount
+scoreboard players reset @a JnR.checkpointCount

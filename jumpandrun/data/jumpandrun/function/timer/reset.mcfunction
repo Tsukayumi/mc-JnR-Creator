@@ -1,5 +1,5 @@
 # Reset timer for all players
-scoreboard players reset @a timerT
-scoreboard players reset @a timerS
-scoreboard players reset @a timerM
-scoreboard players reset @a timerH
+scoreboard players reset @a JnR.timerT
+scoreboard players reset @a JnR.timerS
+scoreboard players reset @a JnR.timerM
+scoreboard players reset @a JnR.timerH
