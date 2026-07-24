@@ -2,11 +2,11 @@
 # Remove all scoreboards and entities created by the datapack
 
 # Remove all scoreboards
-scoreboard objectives remove JnR.checkpointCount
+scoreboard objectives remove JnR.checkpointID
+scoreboard objectives remove JnR.displayID
 scoreboard objectives remove JnR.checkpointCooldown
 scoreboard objectives remove JnR.carrotStickUsed
 scoreboard objectives remove JnR.temp_checkpoint
-scoreboard objectives remove JnR.temp_AbsorptionAmount
 scoreboard objectives remove JnR.fails
 scoreboard objectives remove JnR.timerT
 scoreboard objectives remove JnR.timerS

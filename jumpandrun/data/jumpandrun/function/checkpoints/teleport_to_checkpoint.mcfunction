@@ -2,19 +2,18 @@
 # No item removal needed - Carrot on a Stick has no disruptive effects
 
 # Find armor stand with AbsorptionAmount value of last checkpoint
-# Mark player temporarily for multiplayer safety
+# Mark player temporarily
 tag @s add teleporting_player
 
-# Play fail sound
+# fail sound
 execute as @a[tag=teleporting_player] at @s run playsound minecraft:entity.player.death player @s ~ ~ ~ 1 1
 
-# Teleport directly to this armor stand
-execute as @e[type=armor_stand,tag=checkpoint] store result score @s JnR.temp_AbsorptionAmount run data get entity @s AbsorptionAmount
-execute as @e[type=armor_stand,tag=checkpoint] if score @s JnR.temp_AbsorptionAmount = @a[tag=teleporting_player,limit=1] JnR.checkpointCount at @s run tp @a[tag=teleporting_player,limit=1] ~ ~-0.2 ~ ~ ~
-execute as @e[type=armor_stand,tag=checkpoint] if score @s JnR.temp_AbsorptionAmount = @a[tag=teleporting_player,limit=1] JnR.checkpointCount run data modify entity @a[tag=teleporting_player,limit=1] Rotation set from entity @s Rotation
+# Teleport directly to marker
+execute as @e[type=marker,tag=checkpoint] if score @s JnR.checkpointID = @a[tag=teleporting_player,limit=1] JnR.checkpointID at @s run tp @a[tag=teleporting_player,limit=1] ~ ~-0.2 ~ ~ ~
+execute as @e[type=marker,tag=checkpoint] if score @s JnR.checkpointID = @a[tag=teleporting_player,limit=1] JnR.checkpointID run data modify entity @a[tag=teleporting_player,limit=1] Rotation set from entity @s Rotation
 
-#fails add +1
-execute as @e[type=armor_stand,tag=checkpoint] if score @s JnR.temp_AbsorptionAmount = @a[tag=teleporting_player,limit=1] JnR.checkpointCount run scoreboard players add @a[tag=teleporting_player,limit=1] JnR.fails 1
+# add Fails +1
+execute as @e[type=marker,tag=checkpoint] if score @s JnR.checkpointID = @a[tag=teleporting_player,limit=1] JnR.checkpointID run scoreboard players add @a[tag=teleporting_player,limit=1] JnR.fails 1
 
-# Remove temporary tag
+# remove temporary tag
 tag @s remove teleporting_player
