@@ -18,12 +18,13 @@ execute as @e[type=marker,tag=checkpoint_new,limit=1] if score @s JnR.checkpoint
 execute as @e[type=marker,tag=checkpoint_new,limit=1] if score @s JnR.checkpointID matches 2.. run tag @s add end
 execute as @e[type=marker,tag=checkpoint_new,limit=1] if score @s JnR.checkpointID matches 3.. run scoreboard players operation $temp JnR.checkpointID = @s JnR.checkpointID
 execute as @e[type=marker,tag=checkpoint_new,limit=1] if score @s JnR.checkpointID matches 3.. run scoreboard players remove $temp JnR.checkpointID 1
-execute as @e[type=marker,tag=checkpoint_new,limit=1] if score @s JnR.checkpointID = $temp JnR.checkpointID run tag @s remove end
+execute as @e[type=marker,tag=end,limit=1] if score @s JnR.checkpointID = $temp JnR.checkpointID run tag @s remove end
 execute as @e[type=text_display,tag=display_new,limit=1] if score @s JnR.displayID matches 1 run tag @s add start
 execute as @e[type=text_display,tag=display_new,limit=1] if score @s JnR.displayID matches 2.. run tag @s add end
 execute as @e[type=text_display,tag=display_new,limit=1] if score @s JnR.displayID matches 3.. run scoreboard players operation $temp JnR.displayID = @s JnR.displayID
 execute as @e[type=text_display,tag=display_new,limit=1] if score @s JnR.displayID matches 3.. run scoreboard players remove $temp JnR.displayID 1
 execute as @e[type=text_display,tag=end,limit=1] if score @s JnR.displayID = $temp JnR.displayID run tag @s remove end
+
 
 # Save player's view direction in armor stand
 data modify entity @e[type=marker,tag=checkpoint_new,limit=1] Rotation set from entity @s Rotation

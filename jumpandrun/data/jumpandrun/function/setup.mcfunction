@@ -33,11 +33,6 @@ scoreboard players set @a JnR.Player 0
 
 
 tellraw @a {"text":"------------------------------------------------","color":"white"}
-tellraw @a {"text":"Jump and Run Datapack loaded! \n","color":"green"}
-tellraw @a {"text":"text \n","color":"gray"}
-tellraw @a {"text":"[HELP]  [GET COMMAND BOOK]","color":"red"}
+tellraw @a {"text":"Jump and Run Datapack loaded!","color":"green"}
+tellraw @a {"text":"","extra":[{"text":"For Documentation, visit the GitHub repository. ","color":"gray"},{"text":"[GitHub]","color":"red","underlined":true,"hover_event":{"action":"show_text","value":{"text":"Copy GitHub URL"}},"click_event":{"action":"copy_to_clipboard","value":"https://github.com/Tsukayumi/mc-JnR-Creator"}}]}
 tellraw @a {"text":"------------------------------------------------","color":"white"}
-
-
-execute as @a unless entity @s[tag=JnR_book] run loot give @s loot jumpandrun:admin_book
-execute as @a unless entity @s[tag=JnR_book] run tag @s add JnR_book

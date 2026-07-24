@@ -9,3 +9,5 @@ scoreboard players remove $global JnR.displayID 1
 
 execute as @e[type=marker,tag=checkpoint] at @s unless block ~ ~ ~ minecraft:light_weighted_pressure_plate run kill @s
 execute as @e[type=text_display,tag=display] at @s unless block ~ ~ ~ minecraft:light_weighted_pressure_plate run kill @s
+
+execute as @e[type=marker,tag=checkpoint] if score @s JnR.checkpointID = $global JnR.checkpointID run tag @s add end

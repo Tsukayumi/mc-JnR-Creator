@@ -30,3 +30,8 @@ execute as @a[gamemode=!spectator,gamemode=!creative,scores={JnR.checkpointCoold
 # Cooldown System for Checkpoints
 scoreboard players remove @a[scores={JnR.checkpointCooldown=1..}] JnR.checkpointCooldown 1
 execute as @a at @s unless block ~ ~ ~ minecraft:light_weighted_pressure_plate run scoreboard players set @s JnR.checkpointCooldown 0
+
+
+# Teleport to last checkpoint using Carrot on a Stick
+execute as @a[gamemode=!spectator,gamemode=!creative,scores={JnR.carrotStickUsed=1..,JnR.checkpointID=1..}] run function jumpandrun:checkpoints/teleport_to_checkpoint
+scoreboard players reset @a[scores={JnR.carrotStickUsed=1..}] JnR.carrotStickUsed
