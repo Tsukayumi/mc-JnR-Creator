@@ -1,0 +1,308 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:custom_name": {
+                  "text": "§6§lJump and Run Control"
+                },
+                "minecraft:written_book_content": {
+                  "title": "Jump and Run Control",
+                  "author": "Jump and Run",
+                  "pages": [
+                    {
+                      "text": "§8-------------------\n",
+                      "extra": [
+                        {
+                          "text": "§6§lJUMP AND RUN\n",
+                          "color": "gold",
+                          "bold": true
+                        },
+                        {
+                          "text": "§6§lCONTROL\n\n",
+                          "color": "gold",
+                          "bold": true
+                        },
+                        {
+                          "text": "§a- Admin Tool\n",
+                          "color": "green"
+                        },
+                        {
+                          "text": "§7für deine\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "§7Jump & Run\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "§7Map\n\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "§8Version 1.0\n\n",
+                          "color": "dark_gray"
+                        },
+                        {
+                          "text": "§7Nutze dieses\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "§7Buch zur\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "§7Verwaltung.\n\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "§8└ §7Weiter",
+                          "color": "dark_gray"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "§8-------------------\n",
+                      "extra": [
+                        {
+                          "text": "§6§lINHALT\n\n",
+                          "color": "gold",
+                          "bold": true
+                        },
+                        {
+                          "text": "§a- Checkpoints\n",
+                          "color": "green"
+                        },
+                        {
+                          "text": "  §7Erstellen,\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "  §7Löschen,\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "  §7Reset\n\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "§b- Start & Ziel\n",
+                          "color": "aqua"
+                        },
+                        {
+                          "text": "  §7Anfang &\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "  §7Ende\n\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "§6- Timer\n",
+                          "color": "gold"
+                        },
+                        {
+                          "text": "  §7Zeit steuern\n\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "§8└ §7Weiter",
+                          "color": "dark_gray"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "§8-------------------\n",
+                      "extra": [
+                        {
+                          "text": "§6§lCHECKPOINTS\n\n",
+                          "color": "gold",
+                          "bold": true
+                        },
+                        {
+                          "text": "§a- Erstellen\n",
+                          "color": "green",
+                          "click_event": {
+                            "action": "run_command",
+                            "command": "function jumpandrun:checkpoints/create_checkpoint"
+                          },
+                          "hover_event": {
+                            "action": "show_text",
+                            "value": {
+                              "text": "§aNeuen Checkpoint\n§7an deiner Position"
+                            }
+                          }
+                        },
+                        {
+                          "text": "\n§c- Löschen\n",
+                          "color": "red",
+                          "click_event": {
+                            "action": "run_command",
+                            "command": "function jumpandrun:checkpoints/remove_checkpoint"
+                          },
+                          "hover_event": {
+                            "action": "show_text",
+                            "value": {
+                              "text": "§cLöscht den\n§7nächsten CP"
+                            }
+                          }
+                        },
+                        {
+                          "text": "\n§4- Alle löschen\n",
+                          "color": "dark_red",
+                          "click_event": {
+                            "action": "run_command",
+                            "command": "function jumpandrun:checkpoints/reset"
+                          },
+                          "hover_event": {
+                            "action": "show_text",
+                            "value": {
+                              "text": "§4⚠ ACHTUNG!\n§cLöscht alle CPs"
+                            }
+                          }
+                        },
+                        {
+                          "text": "\n§8└ §7Klick",
+                          "color": "dark_gray"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "§8-------------------\n",
+                      "extra": [
+                        {
+                          "text": "§6§lSTART & ZIEL\n\n",
+                          "color": "gold",
+                          "bold": true
+                        },
+                        {
+                          "text": "§b- Start\n",
+                          "color": "aqua",
+                          "click_event": {
+                            "action": "run_command",
+                            "command": "function jumpandrun:checkpoints/create_start"
+                          },
+                          "hover_event": {
+                            "action": "show_text",
+                            "value": {
+                              "text": "§bStart setzen\n§7an deiner Position"
+                            }
+                          }
+                        },
+                        {
+                          "text": "\n§c- Ziel\n",
+                          "color": "red",
+                          "click_event": {
+                            "action": "run_command",
+                            "command": "function jumpandrun:checkpoints/create_end"
+                          },
+                          "hover_event": {
+                            "action": "show_text",
+                            "value": {
+                              "text": "§cZiel setzen\n§7an deiner Position"
+                            }
+                          }
+                        },
+                        {
+                          "text": "\n§8└ §7Klick",
+                          "color": "dark_gray"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "§8-------------------\n",
+                      "extra": [
+                        {
+                          "text": "§6§lSYSTEM\n\n",
+                          "color": "gold",
+                          "bold": true
+                        },
+                        {
+                          "text": "§6- Timer reset\n",
+                          "color": "gold",
+                          "click_event": {
+                            "action": "run_command",
+                            "command": "function jumpandrun:timer/reset"
+                          },
+                          "hover_event": {
+                            "action": "show_text",
+                            "value": {
+                              "text": "§6Timer reset\n§7Startet neu"
+                            }
+                          }
+                        },
+                        {
+                          "text": "\n§c- Map Reset\n",
+                          "color": "red",
+                          "click_event": {
+                            "action": "run_command",
+                            "command": "function jumpandrun:reset"
+                          },
+                          "hover_event": {
+                            "action": "show_text",
+                            "value": {
+                              "text": "§4⚠ ACHTUNG!\n§cReset ALLES"
+                            }
+                          }
+                        },
+                        {
+                          "text": "\n§8└ §7Klick",
+                          "color": "dark_gray"
+                        }
+                      ]
+                    },
+                    {
+                      "text": "§8-------------------\n",
+                      "extra": [
+                        {
+                          "text": "§6§lHILFE\n\n",
+                          "color": "gold",
+                          "bold": true
+                        },
+                        {
+                          "text": "§a- Linksklick\n",
+                          "color": "green"
+                        },
+                        {
+                          "text": "  §7= Aktion\n\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "§b- Hover\n",
+                          "color": "aqua"
+                        },
+                        {
+                          "text": "  §7= Infos\n\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "§c- Nur für Admins\n",
+                          "color": "red"
+                        },
+                        {
+                          "text": "  §7& Ersteller\n\n",
+                          "color": "gray"
+                        },
+                        {
+                          "text": "§8└ §7Viel Erfolg!",
+                          "color": "dark_gray"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

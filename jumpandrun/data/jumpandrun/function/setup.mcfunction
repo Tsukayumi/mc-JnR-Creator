@@ -4,10 +4,13 @@ gamerule keep_inventory true
 scoreboard objectives add JnR.carrotStickUsed minecraft.used:minecraft.carrot_on_a_stick
 
 # Checkpoint
-scoreboard objectives add JnR.checkpointCount dummy
+scoreboard objectives add JnR.checkpointID dummy
+scoreboard players add $global JnR.checkpointID 0
+scoreboard players add $temp JnR.checkpointID 0
+scoreboard objectives add JnR.displayID dummy
+scoreboard players add $global JnR.displayID 0
+scoreboard players add $temp JnR.displayID 0
 scoreboard objectives add JnR.checkpointCooldown dummy
-scoreboard objectives add JnR.temp_AbsorptionAmount dummy
-scoreboard players set $global JnR.checkpointCount 0
 scoreboard objectives add JnR.temp_checkpoint dummy
 scoreboard objectives add JnR.fails dummy
 
@@ -28,8 +31,13 @@ scoreboard objectives add JnR.Player dummy {"text":"Jump and Run","color":"red",
 scoreboard objectives setdisplay sidebar JnR.Player
 scoreboard players set @a JnR.Player 0
 
+
 tellraw @a {"text":"------------------------------------------------","color":"white"}
 tellraw @a {"text":"Jump and Run Datapack loaded! \n","color":"green"}
 tellraw @a {"text":"text \n","color":"gray"}
 tellraw @a {"text":"[HELP]  [GET COMMAND BOOK]","color":"red"}
 tellraw @a {"text":"------------------------------------------------","color":"white"}
+
+
+execute as @a unless entity @s[tag=JnR_book] run loot give @s loot jumpandrun:admin_book
+execute as @a unless entity @s[tag=JnR_book] run tag @s add JnR_book
