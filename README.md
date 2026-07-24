@@ -34,3 +34,4 @@ Use this command to enable the datapack.
 
 ## Additional Notes
 - You can right-click with a carrot_on_a_stick to teleport to your last checkpoint.
+- Checkpoint can only be used in Survival and Adventure Mode
