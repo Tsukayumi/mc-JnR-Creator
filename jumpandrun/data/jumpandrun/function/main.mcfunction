@@ -35,6 +35,5 @@ execute as @a at @s unless block ~ ~ ~ minecraft:light_weighted_pressure_plate r
 # Teleport to last checkpoint using Carrot on a Stick
 execute as @a[gamemode=!spectator,gamemode=!creative,scores={JnR.carrotStickUsed=1..,JnR.checkpointID=1..}] run function jumpandrun:checkpoints/teleport_to_checkpoint
 scoreboard players reset @a[scores={JnR.carrotStickUsed=1..}] JnR.carrotStickUsed
-
 # Teleport to last checkpoint when y < 0
 execute as @a at @s if entity @s[y=0,dy=-64] run function jumpandrun:checkpoints/teleport_to_checkpoint

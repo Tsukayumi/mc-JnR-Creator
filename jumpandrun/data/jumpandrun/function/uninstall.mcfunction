@@ -1,6 +1,10 @@
 # Uninstall Jump and Run Datapack
 # Remove all scoreboards and entities created by the datapack
 
+# Remove all checkpoint and end armor stands
+kill @e[type=marker,tag=checkpoint]
+kill @e[type=text_display,tag=display]
+
 # Remove all scoreboards
 scoreboard objectives remove JnR.checkpointID
 scoreboard objectives remove JnR.displayID
@@ -17,13 +21,11 @@ scoreboard objectives remove JnR.Player
 # Remove team
 team remove JnR
 
-# Remove all checkpoint and end armor stands
-kill @e[type=armor_stand,tag=checkpoint]
-kill @e[type=armor_stand,tag=end]
-
 # Reset gamerules
 gamerule keep_inventory false
 
 # Confirmation message
+tellraw @a {"text":"------------------------------------------------","color":"white"}
 tellraw @a {"text":"Jump and Run Datapack successfully uninstalled!","color":"red","bold":true}
 tellraw @a {"text":"All scoreboards, teams and entities have been removed.","color":"gray"}
+tellraw @a {"text":"------------------------------------------------","color":"white"}
