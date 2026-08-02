@@ -14,10 +14,8 @@ Use this command to enable the datapack.
   Creates a checkpoint where players can respawn if they die.
 
 - **Remove Start/Checkpoint:**  
-  To remove a checkpoint, just remove the pressure plate under the checkpoint.
-
-> **Important for Removing Points:**  
-> When removing a checkpoint, keep in mind you can only add new checkpoints at the top.
+  To remove a checkpoint, just remove the pressure plate under the checkpoint.<br>
+  keep in mind you can only add new checkpoints at the top.
 
 ### Reset and Uninstall
 - **Reset Timer and Progress:**  
@@ -32,6 +30,6 @@ Use this command to enable the datapack.
   `/datapack disable "file/jumpandrun"`  
   Disables the datapack and removes all associated data and settings.
 
-## Additional Notes
+## Additional Notes 
 - You can right-click with a carrot_on_a_stick to teleport to your last checkpoint.
 - Checkpoint can only be used in Survival and Adventure Mode
